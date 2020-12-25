@@ -29,6 +29,7 @@ public class InventoryManager : NetworkedBehaviour
     {
         _stats = stats;
         _input = input;
+        // Make static class to handle custom class serialization
         ItemSlotNetworkedData.RegisterSerialization();
 
         _statsPanel.SetStats(_stats.Strength, _stats.Armour, _stats.FreezeResistance, _stats.HeatResistance);
