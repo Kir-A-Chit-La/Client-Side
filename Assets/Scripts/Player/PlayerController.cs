@@ -20,6 +20,7 @@ public class PlayerController : NetworkedBehaviour
     [SerializeField] private GameObject _playerInterface;
     private TriggersHandler _triggersHandler;
     private CharacterController _controller;
+    private CameraController _camera;
     [SerializeField] private Transform _groundChecker;
 
     public string currentState;
@@ -100,9 +101,12 @@ public class PlayerController : NetworkedBehaviour
         Transform = GetComponent<Transform>();
         _triggersHandler = GetComponent<TriggersHandler>();
         _controller = GetComponent<CharacterController>();
+        _camera = GetComponentInChildren<CameraController>();
         _playerInterface.SetActive(true);
         
+        _camera.Init(IsLocalPlayer);
         _triggersHandler.Init();
+        Input.enabled = true;
         Input.Init();
         Animator.Init();
         _inventoryManager.Init(Stats, Input);

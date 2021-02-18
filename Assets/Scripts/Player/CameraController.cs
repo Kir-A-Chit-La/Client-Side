@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI;
 
-public class CameraController : NetworkedBehaviour
+public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform _targetPlayer;
     [SerializeField] private float _smoothness = 10f;
@@ -11,9 +10,9 @@ public class CameraController : NetworkedBehaviour
     [SerializeField] private Vector3 _cameraRotation;
     private Vector3 _velocity = Vector3.zero;
 
-    private void Start()
+    public void Init(bool isLocalPlayer)
     {
-        if(IsLocalPlayer)
+        if(isLocalPlayer)
         {
             gameObject.transform.SetParent(null);
         }

@@ -12,7 +12,7 @@ public class Client : MonoBehaviour
 
     [SerializeField] private string _ip = "192.168.0.250";
     [SerializeField] private int _port = 26950;
-    public int _netID;
+    public int netID;
     private bool _isConnected = false;
     public TCP tcp;
 

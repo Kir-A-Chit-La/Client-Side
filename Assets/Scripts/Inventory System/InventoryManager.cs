@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using MLAPI;
-using MLAPI.NetworkedVar;
 using MLAPI.NetworkedVar.Collections;
 using System.Collections.Generic;
 using MLAPI.Messaging;
@@ -70,7 +69,6 @@ public class InventoryManager : NetworkedBehaviour
                 if(itemSlot.Item != null)
                     (itemSlot.Item as EquippableItem).Unequip(_stats);
             
-            Debug.Log("Item is null");
             itemSlot.Item = null;
         }
         _statsPanel.UpdateStatValues();

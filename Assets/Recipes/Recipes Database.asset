@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa27a94a509bbd95780d41eaf5533dac, type: 3}
-  m_Name: Iron Ore
+  m_Script: {fileID: 11500000, guid: 108fb16f86880f544bb30b9146ec16ff, type: 3}
+  m_Name: Recipes Database
   m_EditorClassIdentifier: 
-  _id: 11c3239768627a3c98d24222bfd92415
-  Name: Iron Ore
-  Weight: 0.6
-  MaximumStackSize: 20
-  Preview: {fileID: 21300000, guid: 3e4fcc84a0ac95b429c56452575f6021, type: 3}
-  Prefab: {fileID: 0}
+  recipes: []

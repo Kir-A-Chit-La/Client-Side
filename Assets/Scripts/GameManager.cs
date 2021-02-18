@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void Play(int charId)
     {
-        NetworkingManager.Singleton.NetworkConfig.ConnectionData = Encoding.ASCII.GetBytes($"{Client.Instance._netID} {charId}");
+        NetworkingManager.Singleton.NetworkConfig.ConnectionData = Encoding.ASCII.GetBytes($"{Client.Instance.netID} {charId}");
         NetworkingManager.Singleton.StartClient();
         _loadingScreen.SetActive(true);
         LoadScene((int)Scenes.GAME_SCENE);

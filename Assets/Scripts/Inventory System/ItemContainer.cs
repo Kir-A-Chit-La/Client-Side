@@ -46,14 +46,16 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
     public virtual int ItemCount(string itemId)
     {
         int number = 0;
-        for(int i = 0; i < itemSlots.Count; i++)
-        {
-            if(itemSlots[i].Item.Id == itemId)
-            {
-                number += itemSlots[i].Amount;
-            }
-        }
-        return number;
+
+		for (int i = 0; i < itemSlots.Count; i++)
+		{
+			Item item = itemSlots[i].Item;
+			if (item != null && item.Id == itemId)
+			{
+				number += itemSlots[i].Amount;
+			}
+		}
+		return number;
     }
     public virtual bool ContainsItem(Item item)
     {
@@ -67,17 +69,18 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
         return false;
     }
     public virtual bool CanAddItem(Item item, int amount = 1)
-    {
-        int freeSpaces = 0;
-        foreach(ItemSlot itemSlot in itemSlots)
-        {
-            if(itemSlot.Item != null || itemSlot.Item.Id == item.Id)
-            {
-                freeSpaces += item.MaximumStackSize - itemSlot.Amount;
-            }
-        }
-        return freeSpaces >= amount;
-    }
+	{
+		int freeSpaces = 0;
+
+		foreach (ItemSlot itemSlot in itemSlots)
+		{
+			if (itemSlot.Item == null || itemSlot.Item.Id == item.Id)
+			{
+				freeSpaces += item.MaximumStackSize - itemSlot.Amount;
+			}
+		}
+		return freeSpaces >= amount;
+	}
     public virtual bool AddItem(Item item)
     {
         for(int i = 0; i < itemSlots.Count; i++)

@@ -107,7 +107,9 @@ public class MainMenuController : MonoBehaviour
         if(_selectedCharacter == character)
             return;
         
-        _selectedCharacter.Unselect();
+        if(_selectedCharacter != null)
+            _selectedCharacter.Unselect();
+        
         _selectedCharacter = character;
         _selectedCharacter.Select();
     }

@@ -14,7 +14,7 @@ public class ClientSend
     {
         using (Packet _packet = new Packet((int)ClientPackets.welcomeReceived))
         {
-            _packet.Write(Client.Instance._netID);
+            _packet.Write(Client.Instance.netID);
 
             SendTCPData(_packet);
         }

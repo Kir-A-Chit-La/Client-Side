@@ -3,8 +3,8 @@
 [CreateAssetMenu(fileName = "New Item", menuName = "Custom/Items/Item")]
 public class Item : ScriptableObject
 {
-    [SerializeField] private string _id;
-    public string Id => _id;
+    [SerializeField] private string id;
+    public string Id => id;
     public string Name;
     public string Description;
     public float Weight;
@@ -16,6 +16,6 @@ public class Item : ScriptableObject
     public virtual void Destroy() {}
     private void OnValidate()
     {
-        _id = Hasher.GetStableHash64(Name).ToString();
+        id = Hasher.GetStableHash64(Name).ToString();
     }
 }

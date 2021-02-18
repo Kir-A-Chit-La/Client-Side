@@ -429,13 +429,13 @@ TextureImporter:
       name: Inventory Panel
       rect:
         serializedVersion: 2
-        x: 2723
+        x: 2713
         y: 1467
-        width: 850
+        width: 845
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 15, y: 20, z: 15, w: 20}
+      border: {x: 155, y: 240, z: 155, w: 240}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -455,7 +455,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -463,6 +463,27 @@ TextureImporter:
       bones: []
       spriteID: 458ad208c4d64d450800000000000000
       internalID: 6112630769584023636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inventory_9
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 2300
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483fd0f82e617b6b0800000000000000
+      internalID: -5280726875750141052
       vertices: []
       indices: 
       edges: []

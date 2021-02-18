@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa83a9b70dd220e1a10b5cb8982bd40, type: 3}
+  m_Name: Old Shield
+  m_EditorClassIdentifier: 
+  Materials:
+  - Item: {fileID: 11400000, guid: 56994841df24aa598b96e9ece166197a, type: 2}
+    Amount: 8
+  - Item: {fileID: 11400000, guid: 11c3239768627a3c98d24222bfd92415, type: 2}
+    Amount: 2
+  Results:
+  - Item: {fileID: 11400000, guid: b9d4082236095f73aac564381715d8b7, type: 2}
+    Amount: 1

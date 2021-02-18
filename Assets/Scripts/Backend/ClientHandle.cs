@@ -12,7 +12,7 @@ public class ClientHandle
         int _netID = _packet.ReadInt();
 
         Debug.Log($"Message from server: {_msg}");
-        Client.Instance._netID = _netID;
+        Client.Instance.netID = _netID;
 
         ClientSend.WelcomeReceived();
     }

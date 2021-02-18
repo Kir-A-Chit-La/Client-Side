@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UnityEngine.UI
 {
-    [AddComponentMenu("Hexagonal Grid Layout Group")]
+    [AddComponentMenu("Layout/Hexagonal Layout Group")]
     public class HexagonalLayoutGroup : LayoutGroup
     {
         public enum Corner { UpperLeft = 0, UpperRight = 1, LowerLeft = 2, LowerRight = 3 }
@@ -38,6 +38,7 @@ namespace UnityEngine.UI
             base.OnValidate();
             constraintCount = constraintCount;
         }
+
         #endif
 
         public override void CalculateLayoutInputHorizontal()
@@ -108,7 +109,7 @@ namespace UnityEngine.UI
 
             if (axis == 0)
             {
-                // Only set the sizes when invoked for horizontal axis, not the positions.
+            // Only set the sizes when invoked for horizontal axis, not the positions.
                 for (int i = 0; i < rectChildren.Count; i++)
                 {
                     RectTransform rect = rectChildren[i];
@@ -194,6 +195,7 @@ namespace UnityEngine.UI
                     positionY = i % cellsPerMainAxis;
                 }
 
+
                 if (cornerX == 1)
                     positionX = actualCellCountX - 1 - positionX;
                 if (cornerY == 1)
@@ -208,11 +210,13 @@ namespace UnityEngine.UI
                     positionX_offset = i % sizeOfSubset;
                     positionY_offset = i / sizeOfSubset * 2;
 
+                    //Debug.Log($"{i}, {positionX_offset}");
+
                     // Set X position
                     if(positionX_offset < cellsPerMainAxis)
                         SetChildAlongAxis(rectChildren[i], 0, startOffset.x + (cellSize[0] + spacing[0]) * positionX_offset, cellSize[0]); // Lies on Row 1 of Subset
                     else
-                        SetChildAlongAxis(rectChildren[i], 0, startOffset.x + cellSize[0]/2 + (cellSize[0] + spacing[0]) * (positionX_offset % (cellsPerMainAxis -1)), cellSize[0]); // Lies on Row 2 of Subset
+                        SetChildAlongAxis(rectChildren[i], 0, startOffset.x + cellSize[0]/2 + (cellSize[0] + spacing[0]) * (positionX_offset % (cellsPerMainAxis)), cellSize[0]); // Lies on Row 2 of Subset
 
                     // Set Y position
                     if(positionX_offset < cellsPerMainAxis)
